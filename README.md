@@ -1,4 +1,4 @@
-## Athlete stroke assessment app
+## Athlete stroke assessment app - [WIP]
 
 ### Why?
 
