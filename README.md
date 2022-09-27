@@ -8,6 +8,8 @@ The coaches would be able to record the athletes movements using the native app 
 
 ### Design and wireframes
 
-[Figma](https://www.figma.com/file/NNBhPR1GoRkvuvcgLSjSA0/movement-assessment-tool?node-id=0%3A1)
+- [Figma Wireframes](https://www.figma.com/file/NNBhPR1GoRkvuvcgLSjSA0/movement-assessment-tool?node-id=0%3A1)
 
-![System design](https://github.com/shaarang1010/move-assessment/blob/master/assessment-tool.drawio.png)
+- System design
+
+  ![System design](https://github.com/shaarang1010/move-assessment/blob/master/assessment-tool.drawio.png)
