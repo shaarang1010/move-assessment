@@ -42,6 +42,25 @@ importers:
       babel-preset-expo: 9.2.0_@babel+core@7.19.1
       typescript: 4.8.3
 
+  apps/web-app:
+    specifiers:
+      '@types/react': ^18.0.17
+      '@types/react-dom': ^18.0.6
+      '@vitejs/plugin-react': ^2.1.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      typescript: ^4.6.4
+      vite: ^3.1.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    devDependencies:
+      '@types/react': 18.0.21
+      '@types/react-dom': 18.0.6
+      '@vitejs/plugin-react': 2.1.0_vite@3.1.3
+      typescript: 4.8.3
+      vite: 3.1.3
+
   packages/shared-models:
     specifiers:
       '@types/react': ^18.0.17
@@ -61,6 +80,35 @@ importers:
       '@types/react': 18.0.21
       '@types/react-dom': 18.0.6
       '@types/uuid': 8.3.4
+      '@vitejs/plugin-react': 2.1.0_vite@3.1.3
+      typescript: 4.8.3
+      vite: 3.1.3
+
+  packages/shared-ui-views:
+    specifiers:
+      '@types/react': ^18.0.17
+      '@types/react-dom': ^18.0.6
+      '@vitejs/plugin-react': ^2.1.0
+      native-base: ^3.4.17
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      react-native-safe-area-context: 3.3.2
+      react-native-svg: 12.1.1
+      react-native-web: 0.17.1
+      shared-models: workspace:*
+      typescript: ^4.6.4
+      vite: ^3.1.0
+    dependencies:
+      native-base: 3.4.17_qszjkcrrgej3ihqhfrezeyff2a
+      react: 18.0.0
+      react-dom: 18.2.0_react@18.0.0
+      react-native-safe-area-context: 4.4.0_ws5w265lwlgfx6ddpl3mdiooma
+      react-native-svg: 13.2.0_ws5w265lwlgfx6ddpl3mdiooma
+      react-native-web: 0.17.1_p3loaxrjznerd6utqsc5tsd45a
+      shared-models: link:../shared-models
+    devDependencies:
+      '@types/react': 18.0.21
+      '@types/react-dom': 18.0.6
       '@vitejs/plugin-react': 2.1.0_vite@3.1.3
       typescript: 4.8.3
       vite: 3.1.3
@@ -2250,10 +2298,10 @@ packages:
     dependencies:
       '@react-aria/utils': 3.13.3_react@18.0.0
       '@react-native-aria/interactions': 0.2.8_ws5w265lwlgfx6ddpl3mdiooma
-      '@react-stately/toggle': 3.2.1_react@18.0.0
+      '@react-stately/toggle': 3.4.1_react@18.0.0
       '@react-types/checkbox': 3.3.3_react@18.0.0
       react: 18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     dev: false
 
   /@react-native-aria/checkbox/0.2.3_ws5w265lwlgfx6ddpl3mdiooma:
@@ -2266,9 +2314,9 @@ packages:
       '@react-aria/utils': 3.13.3_react@18.0.0
       '@react-native-aria/toggle': 0.2.3_ws5w265lwlgfx6ddpl3mdiooma
       '@react-native-aria/utils': 0.2.8_ws5w265lwlgfx6ddpl3mdiooma
-      '@react-stately/toggle': 3.2.1_react@18.0.0
+      '@react-stately/toggle': 3.4.1_react@18.0.0
       react: 18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     dev: false
 
   /@react-native-aria/combobox/0.2.4-alpha.1_wbxgkhrsra2ywmrjbglxxkjsoy:
@@ -2284,7 +2332,7 @@ packages:
       '@react-native-aria/utils': 0.2.8_ws5w265lwlgfx6ddpl3mdiooma
       '@react-types/button': 3.6.1_react@18.0.0
       react: 18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     transitivePeerDependencies:
       - react-dom
     dev: false
@@ -2295,9 +2343,9 @@ packages:
       react: '*'
       react-native: '*'
     dependencies:
-      '@react-aria/focus': 3.2.3_react@18.0.0
+      '@react-aria/focus': 3.8.0_react@18.0.0
       react: 18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     dev: false
 
   /@react-native-aria/interactions/0.2.8_ws5w265lwlgfx6ddpl3mdiooma:
@@ -2310,7 +2358,7 @@ packages:
       '@react-aria/utils': 3.13.3_react@18.0.0
       '@react-native-aria/utils': 0.2.8_ws5w265lwlgfx6ddpl3mdiooma
       react: 18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     dev: false
 
   /@react-native-aria/listbox/0.2.4-alpha.3_ws5w265lwlgfx6ddpl3mdiooma:
@@ -2329,7 +2377,7 @@ packages:
       '@react-types/listbox': 3.3.3_react@18.0.0
       '@react-types/shared': 3.14.1_react@18.0.0
       react: 18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     dev: false
 
   /@react-native-aria/overlays/0.3.3-rc.0_wbxgkhrsra2ywmrjbglxxkjsoy:
@@ -2347,7 +2395,7 @@ packages:
       dom-helpers: 5.2.1
       react: 18.0.0
       react-dom: 18.2.0_react@18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     dev: false
 
   /@react-native-aria/radio/0.2.5_ws5w265lwlgfx6ddpl3mdiooma:
@@ -2360,10 +2408,10 @@ packages:
       '@react-aria/utils': 3.13.3_react@18.0.0
       '@react-native-aria/interactions': 0.2.8_ws5w265lwlgfx6ddpl3mdiooma
       '@react-native-aria/utils': 0.2.8_ws5w265lwlgfx6ddpl3mdiooma
-      '@react-stately/radio': 3.2.1_react@18.0.0
+      '@react-stately/radio': 3.5.1_react@18.0.0
       '@react-types/radio': 3.2.3_react@18.0.0
       react: 18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     dev: false
 
   /@react-native-aria/slider/0.2.5-alpha.2_ws5w265lwlgfx6ddpl3mdiooma:
@@ -2372,15 +2420,15 @@ packages:
       react: '*'
       react-native: '*'
     dependencies:
-      '@react-aria/focus': 3.2.3_react@18.0.0
+      '@react-aria/focus': 3.8.0_react@18.0.0
       '@react-aria/interactions': 3.11.0_react@18.0.0
       '@react-aria/label': 3.4.1_react@18.0.0
       '@react-aria/slider': 3.2.1_react@18.0.0
       '@react-aria/utils': 3.13.3_react@18.0.0
       '@react-native-aria/utils': 0.2.8_ws5w265lwlgfx6ddpl3mdiooma
-      '@react-stately/slider': 3.0.1_react@18.0.0
+      '@react-stately/slider': 3.2.1_react@18.0.0
       react: 18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     dev: false
 
   /@react-native-aria/tabs/0.2.8_ws5w265lwlgfx6ddpl3mdiooma:
@@ -2396,7 +2444,7 @@ packages:
       '@react-stately/tabs': 3.0.0-alpha.1_react@18.0.0
       '@react-types/tabs': 3.0.0-alpha.2_react@18.0.0
       react: 18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     dev: false
 
   /@react-native-aria/toggle/0.2.3_ws5w265lwlgfx6ddpl3mdiooma:
@@ -2405,14 +2453,14 @@ packages:
       react: '*'
       react-native: '*'
     dependencies:
-      '@react-aria/focus': 3.2.3_react@18.0.0
+      '@react-aria/focus': 3.8.0_react@18.0.0
       '@react-aria/utils': 3.13.3_react@18.0.0
       '@react-native-aria/interactions': 0.2.8_ws5w265lwlgfx6ddpl3mdiooma
       '@react-native-aria/utils': 0.2.8_ws5w265lwlgfx6ddpl3mdiooma
       '@react-stately/toggle': 3.4.1_react@18.0.0
       '@react-types/checkbox': 3.3.3_react@18.0.0
       react: 18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     dev: false
 
   /@react-native-aria/utils/0.2.8_ws5w265lwlgfx6ddpl3mdiooma:
@@ -2424,7 +2472,7 @@ packages:
       '@react-aria/ssr': 3.3.0_react@18.0.0
       '@react-aria/utils': 3.13.3_react@18.0.0
       react: 18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     dev: false
 
   /@react-native-community/cli-clean/8.0.4:
@@ -2612,7 +2660,7 @@ packages:
       lodash: 4.17.21
       minimist: 1.2.6
       prompts: 2.4.2
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
       semver: 6.3.0
     transitivePeerDependencies:
       - bufferutil
@@ -3640,6 +3688,11 @@ packages:
 
   /arr-union/3.1.0:
     resolution: {integrity: sha512-sKpyeERZ02v1FeCZT8lrfJq5u6goHCtpTAzPwJYe7c8SPFOboNjNg1vz2L4VTn9T4PQxEx13TbXLmYUcS6Ug7Q==}
+    engines: {node: '>=0.10.0'}
+    dev: false
+
+  /array-find-index/1.0.2:
+    resolution: {integrity: sha512-M1HQyIXcBGtVywBt8WVdim+lrNaK7VHp99Qt5pSNziXznKHViIBbXWtfRTpEFpF/c4FdfxNAsCCwPp5phBYJtw==}
     engines: {node: '>=0.10.0'}
     dev: false
 
@@ -4839,6 +4892,13 @@ packages:
       sha.js: 2.4.11
     dev: false
 
+  /create-react-class/15.7.0:
+    resolution: {integrity: sha512-QZv4sFWG9S5RUvkTYWbflxeZX+JG7Cz0Tn33rQBJ+WFQTqTfUTjMjiv9tnfXazjsO5r0KhPs+AqCjyrQX6h2ng==}
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+    dev: false
+
   /cross-fetch/3.1.5:
     resolution: {integrity: sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==}
     dependencies:
@@ -4907,6 +4967,13 @@ packages:
     dependencies:
       postcss: 7.0.39
       timsort: 0.3.0
+    dev: false
+
+  /css-in-js-utils/2.0.1:
+    resolution: {integrity: sha512-PJF0SpJT+WdbVVt0AOYp9C8GnuruRlL/UFW7932nLWmFLQTaWEzTBQEx7/hn4BuV+WON75iAViSUJLiU3PKbpA==}
+    dependencies:
+      hyphenate-style-name: 1.0.4
+      isobject: 3.0.1
     dev: false
 
   /css-loader/3.6.0_webpack@4.46.0:
@@ -7046,6 +7113,10 @@ packages:
     resolution: {integrity: sha512-J+FkSdyD+0mA0N+81tMotaRMfSL9SGi+xpD3T6YApKsc3bGSXJlfXri3VyFOeYkfLRQisDk1W+jIFFKBeUBbBg==}
     dev: false
 
+  /hyphenate-style-name/1.0.4:
+    resolution: {integrity: sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==}
+    dev: false
+
   /iconv-lite/0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -7145,6 +7216,12 @@ packages:
 
   /ini/1.3.8:
     resolution: {integrity: sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==}
+    dev: false
+
+  /inline-style-prefixer/6.0.1:
+    resolution: {integrity: sha512-AsqazZ8KcRzJ9YPN1wMH2aNM7lkWQ8tSPrW5uDk1ziYwiAPWSZnUsC7lfZq+BDqLqz0B4Pho5wscWcJzVvRzDQ==}
+    dependencies:
+      css-in-js-utils: 2.0.1
     dev: false
 
   /internal-ip/4.3.0:
@@ -8819,7 +8896,7 @@ packages:
       lodash.pick: 4.4.0
       react: 18.0.0
       react-dom: 18.2.0_react@18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
       react-native-keyboard-aware-scroll-view: 0.9.5_react-native@0.69.5
       react-native-safe-area-context: 4.4.0_ws5w265lwlgfx6ddpl3mdiooma
       react-native-svg: 13.2.0_ws5w265lwlgfx6ddpl3mdiooma
@@ -8940,6 +9017,10 @@ packages:
   /node-stream-zip/1.15.0:
     resolution: {integrity: sha512-LN4fydt9TqhZhThkZIVQnF9cwjU3qmUH9h78Mx/K7d3VvfRqqwthLwJEUOEL0QPZ0XQmNN7be5Ggit5+4dq3Bw==}
     engines: {node: '>=0.12.0'}
+    dev: false
+
+  /normalize-css-color/1.0.2:
+    resolution: {integrity: sha512-jPJ/V7Cp1UytdidsPqviKEElFQJs22hUUgK5BOPHTwOonNCk7/2qOxhhqzEajmFrWJowADFfOFh1V+aWkRfy+w==}
     dev: false
 
   /normalize-path/2.1.1:
@@ -10172,7 +10253,7 @@ packages:
     peerDependencies:
       react-native: '>=0.42.0'
     dependencies:
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     dev: false
 
   /react-native-keyboard-aware-scroll-view/0.9.5_react-native@0.69.5:
@@ -10181,7 +10262,7 @@ packages:
       react-native: '>=0.48.4'
     dependencies:
       prop-types: 15.8.1
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
       react-native-iphone-x-helper: 1.3.1_react-native@0.69.5
     dev: false
 
@@ -10192,7 +10273,7 @@ packages:
       react-native: '*'
     dependencies:
       react: 18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
     dev: false
 
   /react-native-svg/13.2.0_ws5w265lwlgfx6ddpl3mdiooma:
@@ -10204,7 +10285,26 @@ packages:
       css-select: 5.1.0
       css-tree: 1.1.3
       react: 18.0.0
-      react-native: 0.69.5_2v4hfeslgq4hk22r264lx5s6gm
+      react-native: 0.69.5_react@18.0.0
+    dev: false
+
+  /react-native-web/0.17.1_p3loaxrjznerd6utqsc5tsd45a:
+    resolution: {integrity: sha512-lUnn+2O8ynQ6/gJKylSxm7DLi2vHw6AujdDV1+LSa8Epe1bYFJNUcJTEhJf0jNYUFGOujzMtuG8Mkz3HdWTkag==}
+    peerDependencies:
+      react: '>=17.0.1'
+      react-dom: '>=17.0.1'
+    dependencies:
+      array-find-index: 1.0.2
+      create-react-class: 15.7.0
+      fbjs: 3.0.4
+      hyphenate-style-name: 1.0.4
+      inline-style-prefixer: 6.0.1
+      normalize-css-color: 1.0.2
+      prop-types: 15.8.1
+      react: 18.0.0
+      react-dom: 18.2.0_react@18.0.0
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /react-native/0.69.5_2v4hfeslgq4hk22r264lx5s6gm:
@@ -10250,6 +10350,55 @@ packages:
       ws: 6.2.2
     transitivePeerDependencies:
       - '@babel/core'
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+    dev: false
+
+  /react-native/0.69.5_react@18.0.0:
+    resolution: {integrity: sha512-4Psrj1nDMLQjBXVH8n3UikzOHQc8+sa6NbxZQR0XKtpx8uC3HiJBgX+/FIum/RWxfi5J/Dt/+A2gLGmq2Hps8g==}
+    engines: {node: '>=14'}
+    hasBin: true
+    peerDependencies:
+      react: 18.0.0
+    dependencies:
+      '@babel/core': 7.19.1
+      '@jest/create-cache-key-function': 27.5.1
+      '@react-native-community/cli': 8.0.6_react-native@0.69.5
+      '@react-native-community/cli-platform-android': 8.0.5
+      '@react-native-community/cli-platform-ios': 8.0.6
+      '@react-native/assets': 1.0.0
+      '@react-native/normalize-color': 2.0.0
+      '@react-native/polyfills': 2.0.0
+      abort-controller: 3.0.0
+      anser: 1.4.10
+      base64-js: 1.5.1
+      event-target-shim: 5.0.1
+      hermes-engine: 0.11.0
+      invariant: 2.2.4
+      jsc-android: 250230.2.1
+      memoize-one: 5.2.1
+      metro-react-native-babel-transformer: 0.70.3
+      metro-runtime: 0.70.3
+      metro-source-map: 0.70.3
+      mkdirp: 0.5.6
+      nullthrows: 1.1.1
+      pretty-format: 26.6.2
+      promise: 8.2.0
+      react: 18.0.0
+      react-devtools-core: 4.24.0
+      react-native-codegen: 0.69.2_@babel+core@7.19.1
+      react-native-gradle-plugin: 0.0.7
+      react-refresh: 0.4.3
+      react-shallow-renderer: 16.15.0_react@18.0.0
+      regenerator-runtime: 0.13.9
+      scheduler: 0.21.0
+      stacktrace-parser: 0.1.10
+      use-sync-external-store: 1.2.0_react@18.0.0
+      whatwg-fetch: 3.6.2
+      ws: 6.2.2
+    transitivePeerDependencies:
       - bufferutil
       - encoding
       - supports-color
