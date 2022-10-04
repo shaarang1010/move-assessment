@@ -1,7 +1,8 @@
 import React from 'react';
 import { Box, Heading, VStack, FormControl, Input, Link, Button, HStack, Text } from 'native-base';
+import { LoginProps } from 'shared-models';
 
-export const Login: React.FC<{}> = () => {
+export const Login: React.FC<LoginProps> = ({ setEmail, setPassword, onLoginFormHandler, email, password }) => {
   return (
     <Box safeArea p="2" py="8" w="90%" maxW="290">
       <Heading

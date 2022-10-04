@@ -1,2 +1,3 @@
 import { User } from './User';
-export type { User };
+import { LoginProps } from './UserSignUp';
+export type { User, LoginProps };

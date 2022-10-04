@@ -1,6 +1,10 @@
 import React, { PropsWithChildren } from 'react';
-import { NativeBaseProvider } from 'native-base';
+import { NativeBaseProvider, Container } from 'native-base';
 
 export const NativeBaseWrapper: React.FC<PropsWithChildren<{}>> = ({ children }) => {
-  return <NativeBaseProvider>{children}</NativeBaseProvider>;
+  return (
+    <NativeBaseProvider>
+      <Container>{children}</Container>
+    </NativeBaseProvider>
+  );
 };
