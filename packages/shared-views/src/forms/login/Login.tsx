@@ -2,7 +2,14 @@ import React from 'react';
 import { Box, Heading, VStack, FormControl, Input, Link, Button, HStack, Text } from 'native-base';
 import { LoginProps } from 'shared-models';
 
-export const Login: React.FC<LoginProps> = ({ setEmail, setPassword, onLoginFormHandler, email, password }) => {
+export const Login: React.FC<LoginProps> = ({
+  setEmail,
+  setPassword,
+  onLoginFormHandler,
+  email,
+  password,
+  onForgotPasswordHandler
+}) => {
   return (
     <Box safeArea p="2" py="8" w="90%" maxW="290">
       <Heading
@@ -30,12 +37,13 @@ export const Login: React.FC<LoginProps> = ({ setEmail, setPassword, onLoginForm
       <VStack space={3} mt="5">
         <FormControl>
           <FormControl.Label>Email ID</FormControl.Label>
-          <Input />
+          <Input value={email} onChangeText={(text: string) => setEmail(text)} />
         </FormControl>
         <FormControl>
           <FormControl.Label>Password</FormControl.Label>
-          <Input type="password" />
+          <Input type="password" value={password} onChangeText={(text: string) => setPassword(text)} />
           <Link
+            onPress={onForgotPasswordHandler}
             _text={{
               fontSize: 'xs',
               fontWeight: '500',
@@ -47,7 +55,7 @@ export const Login: React.FC<LoginProps> = ({ setEmail, setPassword, onLoginForm
             Forget Password?
           </Link>
         </FormControl>
-        <Button mt="2" colorScheme="indigo">
+        <Button mt="2" colorScheme="indigo" onPress={onLoginFormHandler}>
           Sign in
         </Button>
         <HStack mt="6" justifyContent="center">

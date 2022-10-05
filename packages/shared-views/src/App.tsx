@@ -1,20 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Center } from 'native-base';
 import { NativeBaseWrapper } from './providers/native-base/NativeBaseProvider';
-import { Login } from './forms/login/Login';
+import { PropsWithChildren } from 'react';
 
-function App() {
+export const App: React.FC<PropsWithChildren<{}>> = ({ children }) => {
   return (
     <div className="App">
       <NativeBaseWrapper>
-        <Center>
-          <Login />
-        </Center>
+        <Center>{children}</Center>
       </NativeBaseWrapper>
     </div>
   );
-}
+};
 
 export default App;
