@@ -15,10 +15,9 @@ export type SignUpProps = {
   avatar: string;
   password: string;
   retypePassword: string;
-  setFirstName(e: React.ChangeEvent<HTMLInputElement>): void;
-  setLastName(e: React.ChangeEvent<HTMLInputElement>): void;
-  setAvatarUrl(e: React.ChangeEvent<HTMLInputElement>): void;
-  setPassword(e: React.ChangeEvent<HTMLInputElement>): void;
-  setRetypePassword(e: React.ChangeEvent<HTMLInputElement>): void;
+  setFirstName(text: string): void;
+  setLastName(text: string): void;
+  setPassword(text: string): void;
+  setRetypePassword(text: string): void;
   onFormSubmit(): void;
 };

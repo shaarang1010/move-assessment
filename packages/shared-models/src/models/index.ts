@@ -1,3 +1,3 @@
-import { User, LoginProps } from './form-props';
+import { User, LoginProps, SignUpProps } from './form-props';
 
-export type { User, LoginProps };
+export type { User, LoginProps, SignUpProps };

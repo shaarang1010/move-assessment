@@ -1,2 +1,2 @@
-import { User, LoginProps } from './models';
-export type { User, LoginProps };
+import { User, LoginProps, SignUpProps } from './src/models';
+export type { User, LoginProps, SignUpProps };
