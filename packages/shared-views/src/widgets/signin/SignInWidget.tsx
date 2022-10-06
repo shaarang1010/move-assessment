@@ -71,7 +71,7 @@ export const SignInWidget: React.FC<SignInWidgetProps> = ({
           }}
           onPress={toggleSignIn}
         >
-          {}
+          {isSignIn ? `Sign-Up` : `Login`}
         </Link>
       </HStack>
     </Box>
