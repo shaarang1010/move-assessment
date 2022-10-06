@@ -58,27 +58,6 @@ export const Login: React.FC<LoginProps> = ({
         <Button mt="2" colorScheme="indigo" onPress={onLoginFormHandler}>
           Sign in
         </Button>
-        <HStack mt="6" justifyContent="center">
-          <Text
-            fontSize="sm"
-            color="coolGray.600"
-            _dark={{
-              color: 'warmGray.200'
-            }}
-          >
-            I'm a new user.{' '}
-          </Text>
-          <Link
-            _text={{
-              color: 'indigo.500',
-              fontWeight: 'medium',
-              fontSize: 'sm'
-            }}
-            href="#"
-          >
-            Sign Up
-          </Link>
-        </HStack>
       </VStack>
     </Box>
   );
